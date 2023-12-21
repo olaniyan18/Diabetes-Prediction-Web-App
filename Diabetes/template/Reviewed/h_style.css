@@ -40,18 +40,19 @@ button{
 	border-radius: 15px;
 	background-color: #E0A96D;
 	color:white;
-	font-family:Malibu;
+	font-family:Nunito;
 	font-size:20px
 }
 
 .heartd{
-	width: 276px; height: 58px;
+	width: 276px; 
+	height: 58px;
 	position:absolute;
 	top:200px;
 	left:10px;
 	text-align:left;
 	color:white;
-	font-family:Malibu;
+	font-family:Nunito;
 	font-size:20px
 }
 
@@ -65,10 +66,10 @@ button{
 	text-align:left;
 	border-radius: 15px;
 	color:white;
-	font-family:Malibu;
-	font-size:20px;,
-	background-color: #E0A96D
+	font-family:Nunito;
+	font-size:20px;
 }
+
 
 #heartd1{
 	width: 276px;
@@ -80,7 +81,7 @@ button{
 	border:0;
 	border-radius: 15px;
 	color:white;
-	font-family:Malibu;
+	font-family:Nunito;
 	font-size:20px;
 }
 
@@ -104,8 +105,8 @@ button{
 	position: absolute;
 	color: white;
 	font-size: 40px;
-	font-family: Malibu;
-	font-weight: 400;
+	font-family: Nunito;
+	font-weight: 700;
 	word-wrap: break-word;
 }
 
@@ -179,7 +180,7 @@ button{
 	top: 550px;
 	position: absolute;
 	font-size: 20px;
-	font-family: Malibu;
+	font-family: Nunito;
 	font-weight: 400;
 	word-wrap: break-word;
 	color: white;
