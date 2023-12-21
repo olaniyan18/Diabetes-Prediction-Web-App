@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcheck Bot</title>
+    <link rel="stylesheet" type="text/css" href="h_style.css">
+</head>
+<body>
+    <form action="/predict" method="post">
+        <!-- // first page -->
+        <!-- first section -->
+
+        <div id="firRec">
+            <div id="subm">
+                <button type="submit"> Diabetes</button>
+                <a href="h_disease.html" class="subd">
+                    <!-- check style for the above -->
+                    <div class="heartd"> Heart Disease</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- second section -->
+
+        <div id="secRec">
+            
+            <div id="welcome">WELCOME TO HEALTHCHECK</div>
+ 
+            <input class="inprec1" id="top1" type="text" name="a" placeholder="no of pregnancies" required>
+
+            <input class="inprec1" id="top2" type="text" name="b" placeholder="no of pregnancies" required>
+
+            <input class="inprec1" id="top3" type="text" name="c" placeholder="no of pregnancies" required>
+
+            <input class="inprec1" id="top4" type="text" name="d" placeholder="no of pregnancies" required>
+
+            <input class="inprec2" id="top1" type="text" name="e" placeholder="no of pregnancies" required>
+
+            <input class="inprec2" id="top2" type="text" name="f" placeholder="no of pregnancies" required>
+
+            <input class="inprec2" id="top3" type="text" name="g" placeholder="no of pregnancies" required>
+
+            <input class="inprec2" id="top4" type="text" name="h" placeholder="no of pregnancies" required>
+
+            <!-- Predict button -->
+
+            <input class="submitTest" type="submit" value="Test Result" id="submit">
+
+            <p id="response">
+                
+                {% if data == 0 %}
+                     Well, you are lucky
+                {% elif data == 1 %}
+                    You are likely to have diabetes     
+                {% endif %}
+            </p>
+        </div>
+    </form>
+</body>
+</html>
