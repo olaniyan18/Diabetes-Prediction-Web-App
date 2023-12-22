@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthcheck Bot</title>
-    <link rel="stylesheet" type="text/css" href="h_style.css">
+    <link rel="stylesheet" type="text/css" href="/static/h_style.css">
 </head>
 <body>
+    <form action="/predict_heart" method="post">
          <!-- first section -->
         <div id="firRec">
             <div id="subm">
@@ -22,26 +23,92 @@
             
             <div id="welcome">WELCOME TO HEALTHCHECK</div>
  
-           <input class="inprec1" id="top1" type="text" name="a" placeholder="no of pregnancies" required>
--
-            <input class="inprec1" id="top2" type="text" name="b" placeholder="no of pregnancies" required>
+            <input class="inprec1" id="top1" type="text" name="aa" placeholder="Age" required>
 
-            <input class="inprec1" id="top3" type="text" name="c" placeholder="no of pregnancies" required>
+            <select class="inprec1" id="top2" name="bb">
+                <option hidden>Sex</option>
+                <option value="0" name = 'Female'>Female</option>
+                <option value="1" name = 'Male'>Male</option>
+                
+            </select>
 
-            <input class="inprec1" id="top4" type="text" name="d" placeholder="no of pregnancies" required>
+            <select class="inprec1" id="top3" name="cc">
+                <option hidden>Chest Pain</option>
+                <option value="0" name = 'typical angina'>Typical angina</option>
+                <option value="1" name = 'atypical angina'>Atypical angina</option>
+                <option value="2" name = 'non-anginal'>Non-anginal</option>
+                <option value="3" name = 'asymptomatic'>Asymptomatic</option>
+                
+            </select>
 
-            <input class="inprec2" id="top1" type="text" name="e" placeholder="no of pregnancies" required>
+            <input class="inprec1" id="top4" type="text" name="dd" placeholder="Systolic Blood Pressure" required>
 
-            <input class="inprec2" id="top2" type="text" name="f" placeholder="no of pregnancies" required>
+            <input class="inprec1" id="top5" type="text" name="ee" placeholder="Cholesterol Level" required>
 
-            <input class="inprec2" id="top3" type="text" name="g" placeholder="no of pregnancies" required>
+            <select class="inprec2" id="top1" name="ff">
+                <option hidden>Fasting Blood Sugar</option>
+                <option value="0" name = 'no fbs'>No Blood Sugar</option>
+                <option value="1" name = 'fbs'>Blood suagr is present</option>
+                
+            </select>
 
-            <input class="inprec2" id="top4" type="text" name="h" placeholder="no of pregnancies" required>
+            <select class="inprec2" id="top2" name="gg">
+                <option hidden>Electrocardiographic Results</option>
+                <option value="0" name = 'normal'>Normal</option>
+                <option value="1" name = 'stt abnormality'>Stt abnormality</option>
+                <option value="2" name = 'lv hypertrophy'>lv hypertrophy</option>
+                
+            </select>
 
+            <input class="inprec2" id="top3" type="text" name="hh" placeholder="Heart Rate" required>
+
+            <select class="inprec2" id="top4" name="ii">
+                <option hidden>Exercise-Induced Angina</option>
+                <option value="0" name = 'False'>False</option>
+                <option value="1" name = 'True'>True</option>
+                
+            </select>
+
+            <input class="inprec3" id="top1" type="text" name="jj" placeholder="Oldpeak" required>
+
+            <select class="inprec3" id="top2" name="kk">
+                <option hidden>Slope</option>
+                <option value="0" name = 'normal'>Downsloping</option>
+                <option value="1" name = 'fixed defect'> Flat</option>
+                <option value="2" name = 'fixed defect'>Upsloping</option>
+
+            </select>
+            
+            <select class="inprec3" id="top3" name="ll">
+                <option hidden>Coronary Arteries</option>
+                <option value="0" name = 'no'>No major blockage</option>
+                <option value="1" name = 'one'> One major blockage(e.g LAD)</option>
+                <option value="2" name = 'two'>Two major blockage(e.g LMCA,LAD)</option>
+                <option value="3" name = 'three'>Three major blockage(e.g LMCA,LAD, LCX)</option>
+                <option value="4" name = 'four'>All four major blockage(e.g LMCA,LAD, LCX and RCA)</option>
+
+            </select> 
+
+            <select class="inprec3" id="top4" name="mm">
+                <option hidden>Generic Blood Disorder</option>
+                <option value="0" name = 'normal'>Normal</option>
+                <option value="1" name = 'fixed defect'>Fixed Defect</option>
+                <option value="1" name = 'fixed defect'>Reversible Defect</option>
+
+            </select>            
             <!-- Predict button -->
 
             <input class="submitTest" type="submit" value="Test Result" id="submit">
 
+            <p id="response">
+                
+                {% if data == 0 %}
+                     Well, you are lucky
+                {% elif data == 1 %}
+                    You are likely to have Heart Disease     
+                {% endif %}
+            </p>
         </div>
+    </form>
 </body>
 </html>
